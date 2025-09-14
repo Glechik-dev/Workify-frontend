@@ -1,8 +1,10 @@
 :root {
   /* Основные цвета */
   --BG_Color: #0a0f1c; /* Тёмно-тёмно синий фон */
+  --BG_White_Color: #ffffff;
   --BG_Second_Color: #0f172b;
   --Text_Color: #ffffff; /* Основной текст — белый */
+  --Text_Black_Color: #000000;
   --Text_Muted_Color: #b0b0b0; /* Второстепенный текст — серый */
 
   /* Акценты */
