@@ -1,4 +1,3 @@
-import { HeroCompoboxComponent, NuxtImg } from '../../.nuxt/components';
 <script setup lang="ts">
 const options = [
   {
@@ -77,12 +76,12 @@ const items = ref([
         </div>
       </div>
       <div class="flex gap-2.5 items-center">
-        <div
+        <button
           class="text-[15px] rounded-[15px] py-1 px-2.5 border border-(--Primary_Color) hover:bg-(--Secondary_Color) cursor-pointer"
           v-for="value in items"
         >
           {{ value }}
-        </div>
+        </button>
       </div>
     </div>
   </div>

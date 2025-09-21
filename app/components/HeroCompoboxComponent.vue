@@ -14,9 +14,9 @@ import {
   ComboboxViewport,
 } from "reka-ui";
 
-const { options } = defineProps({
-  options: Array<{ name: string; children: Array<{ name: string }> }>,
-});
+const { options } = defineProps<{
+  options: Array<{ name: string; children: Array<{ name: string }> }>;
+}>();
 </script>
 
 <template>

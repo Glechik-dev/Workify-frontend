@@ -11,6 +11,7 @@
   --Primary_Color: #1e90ff; /* Основной синий акцент */
   --Primary_Hover_Color: #0d6efd; /* Синий при наведении */
   --Secondary_Color: #0077cc; /* Тёмно-синий */
+  --Secondary_Color_Opacity: rgba(0, 119, 204, 0.1);
   --Accent_Color: #3399ff; /* Яркий голубой акцент */
 
   /* Элементы интерфейса */

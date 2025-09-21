@@ -1,3 +1,4 @@
 <template>
   <HeroComponent />
+  <OpportunitiesComponent />
 </template>
