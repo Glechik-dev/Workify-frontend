@@ -1,10 +1,7 @@
-<script>
-import { HeaderComponent } from "@/components/HeaderComponent.vue";
-import { FooterComponent } from "@/components/FooterComponent.vue";
-</script>
+<script></script>
 
 <template>
-  <HeaderComponent />
+  <CommonHeaderComponent />
   <NuxtPage />
-  <FooterComponent />
+  <CommonFooterComponent />
 </template>

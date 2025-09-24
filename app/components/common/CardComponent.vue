@@ -21,7 +21,7 @@ const {
 
 <template>
   <div
-    class="border text-white p-5 flex flex-col justify-between relative"
+    class="border text-(--Text_Color) p-5 flex flex-col justify-between relative"
     :class="[w, h, border, rounded, bg]"
   >
     <div>

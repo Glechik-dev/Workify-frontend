@@ -1,9 +1,13 @@
 <script></script>
 
 <template>
-  <div
-    class="w-full mt-15 border-t border-t-(--Secondary_Color_Opacity) flex flex-col justify-center text-white"
+  <footer
+    class="w-full mt-15 border-t border-t-(--Secondary_Color_Opacity) flex flex-col items-center text-(--Text_Color) relative overflow-hidden"
   >
+    <div class="absolute bottom-15 right-5 rotate-90">
+      <NuxtImg src="/Frame 22.png" />
+    </div>
+
     <div class="container px-35 w-full h-full py-3">
       <div class="flex justify-between">
         <div class="flex flex-col gap-2.5 w-50">
@@ -66,7 +70,7 @@
         </ul>
       </div>
     </div>
-  </div>
+  </footer>
 </template>
 
 <style>

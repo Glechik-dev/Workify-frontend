@@ -52,12 +52,12 @@ const itemsCity = ref([
 
     <div class="w-full h-full container px-35">
       <div class="flex justify-between h-[250px]">
-        <CardComponent
+        <CommonCardComponent
           title="Створіть резюме"
           text="Створіть власне резюме для збільшення шансів знайти ідеальну вакансію   "
           :buttons="['Створити резюме']"
         />
-        <CardComponent
+        <CommonCardComponent
           bg=""
           title=""
           text="Свіжі вакансії миттєво з’являються в месенджерах!"
@@ -65,7 +65,9 @@ const itemsCity = ref([
           image="/Frame 31.png"
         />
       </div>
-      <div class="text-white mt-[30px] mb-5 w-full py-4 flex flex-col gap-10">
+      <div
+        class="text-(--Text_Color) mt-[30px] mb-5 w-full py-4 flex flex-col gap-10"
+      >
         <div>
           <div class="text-3xl">Професійні сфери</div>
           <div class="flex gap-2.5 items-center mt-[15px] flex-wrap">
