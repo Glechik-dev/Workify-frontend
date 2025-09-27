@@ -30,12 +30,21 @@
         </ul>
       </nav>
       <div class="flex justify-end items-center gap-8 text-[24px] w-[230px]">
-        <div
+        <NuxtLink
+          to="/auth/login"
           class="px-[10px] py-[2px] rounded-[5px] bg-(--Secondary_Color) border border-(--Primary_Color) cursor-pointer transition"
+          active-class="c"
+          exact-active-class="c"
         >
           Login
-        </div>
-        <div class="cursor-pointer">Sign Up</div>
+        </NuxtLink>
+        <NuxtLink
+          to="/auth/registration"
+          class="cursor-pointer"
+          active-class="c"
+          exact-active-class="c"
+          >Sign Up</NuxtLink
+        >
       </div>
     </div>
   </header>

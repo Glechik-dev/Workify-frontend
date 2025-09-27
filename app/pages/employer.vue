@@ -1,3 +1,4 @@
 <template>
   <EmployerHeroComponent />
+  <EmployerFindResume />
 </template>
