@@ -4,3 +4,7 @@ body {
   background-color: var(--BG_Color);
   font-family: "Roboto", sans-serif;
 }
+
+input {
+  outline: none;
+}

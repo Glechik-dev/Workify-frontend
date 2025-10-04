@@ -87,7 +87,7 @@ const items = ref([
   </div>
 </template>
 
-<style>
+<style scoped>
 input:focus {
   outline: none;
   border-top: 2px solid var(--Primary_Hover_Color);

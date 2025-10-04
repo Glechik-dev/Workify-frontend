@@ -29,4 +29,9 @@
   /* Тени и эффекты */
   --Shadow_Color: rgba(0, 0, 0, 0.6);
   --Glow_Color: rgba(30, 144, 255, 0.5);
+
+  --Google_Color: rgb(0, 87, 163);
+  --Facebook_Color: rgb(31, 31, 150);
+  --X_Color: black;
+  --Github_Color: white;
 }
