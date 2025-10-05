@@ -8,7 +8,12 @@ export default defineNuxtConfig({
   vite: {
     plugins: [tailwindcss()],
   },
-  modules: ["@nuxt/icon", "@nuxt/image", "@nuxtjs/google-fonts"],
+  modules: [
+    "@nuxt/icon",
+    "@nuxt/image",
+    "@nuxtjs/google-fonts",
+    "@vee-validate/nuxt",
+  ],
   googleFonts: {
     families: {
       Roboto: [400, 700],

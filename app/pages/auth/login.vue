@@ -1,3 +1,7 @@
+<script setup lang="ts">
+import InputComponent from "@/components/common/InputComponent.vue";
+</script>
+
 <template>
   <div
     class="w-full text-(--Text_Color) overflow-hidden relative flex justify-center"
@@ -17,16 +21,8 @@
           <div class="text-4xl">Увійдіть на сайт</div>
           <form class="flex flex-col gap-6">
             <div class="flex flex-col gap-6">
-              <input
-                type="text"
-                class="px-5 py-3 h-[60px] rounded-[5px] border border-(--Primary_Color) text-2xl text-(--Text_Color)"
-                placeholder="Email або номер телефону *"
-              />
-              <input
-                type="text"
-                class="px-5 py-3 h-[60px] rounded-[5px] border border-(--Primary_Color) text-2xl text-(--Text_Color)"
-                placeholder="Пароль *"
-              />
+              <InputComponent placeholder="Email або номер телефону *" />
+              <InputComponent placeholder="Пароль *" />
             </div>
             <div class="flex flex-col gap-4">
               <button

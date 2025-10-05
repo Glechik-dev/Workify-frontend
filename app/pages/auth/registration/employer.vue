@@ -1,3 +1,9 @@
+<script setup lang="ts">
+import CompanyExampleTabComponent from "~/components/common/CompanyTabComponent.vue";
+import ContactExampleTabComponent from "~/components/common/ContactTabComponent.vue";
+import InputComponent from "@/components/common/InputComponent.vue";
+</script>
+
 <template>
   <div
     class="w-full text-(--Text_Color) overflow-hidden relative flex justify-center"
@@ -6,26 +12,22 @@
     <NuxtImg src="/logo (1).png" class="absolute top-[10%] left-[-90px]" />
 
     <div class="w-full container px-35 flex">
-      <div class="w-full my-[40px] flex justify-between">
-        <div class="w-[570px] flex flex-col gap-5">
-          <div class="text-5xl">
-            Зареєструйтеся та опублікуйте
-            <span class="text-(--Primary_Color) font-bold"
-              >безкоштовну вакансію</span
-            >
-          </div>
-          <div class="text-4xl text-(--Text_Muted_Color)">
-            Отримуйте відгуки на вакансії та знаходьте кандидатів в Україні
-          </div>
-          <div>
-            <div>
-              Так ваші контакти будуть виглядати для пошукачів
-              <div></div>
+      <div class="w-full my-[55px] flex justify-between">
+        <div class="w-[570px] flex flex-col gap-12">
+          <div class="flex flex-col gap-5">
+            <div class="text-5xl">
+              Зареєструйтеся та опублікуйте
+              <span class="text-(--Primary_Color) font-bold"
+                >безкоштовну вакансію</span
+              >
             </div>
-            <div>
-              Так може виглядати інформація про вашу компанію
-              <div></div>
+            <div class="text-4xl text-(--Text_Muted_Color)">
+              Отримуйте відгуки на вакансії та знаходьте кандидатів в Україні
             </div>
+          </div>
+          <div class="flex flex-col gap-4">
+            <ContactExampleTabComponent />
+            <CompanyExampleTabComponent />
           </div>
         </div>
         <div class="border border-(--Secondary_Color) rounded-[15px] relative">
@@ -37,45 +39,18 @@
             <div class="text-3xl">Створіть акаунт роботодавця</div>
             <form class="flex flex-col gap-2">
               <div class="flex flex-col gap-6">
-                <input
-                  type="text"
-                  class="px-5 py-3 h-[60px] rounded-[5px] border border-(--Primary_Color) text-2xl text-(--Text_Color)"
-                  placeholder="Ім'я та прізвище *"
-                />
-                <input
-                  type="text"
-                  class="px-5 py-3 h-[60px] rounded-[5px] border border-(--Primary_Color) text-2xl text-(--Text_Color)"
-                  placeholder="Email *"
-                />
-                <input
-                  type="text"
-                  class="px-5 py-3 h-[60px] rounded-[5px] border border-(--Primary_Color) text-2xl text-(--Text_Color)"
-                  placeholder="Пароль *"
-                />
-                <input
-                  type="text"
-                  class="px-5 py-3 h-[60px] rounded-[5px] border border-(--Primary_Color) text-2xl text-(--Text_Color)"
-                  placeholder="Підтвердити пароль *"
-                />
+                <InputComponent placeholder="Ім'я та прізвище *" />
+                <InputComponent placeholder="Email *" />
+                <InputComponent placeholder="Номер телефону *" />
+                <InputComponent placeholder="Пароль *" />
+                <InputComponent placeholder="Підтвердити пароль *" />
               </div>
               <div class="flex flex-col gap-4"></div>
               <div class="text-2xl">та розкажіть про свою компанію</div>
               <div class="flex flex-col gap-6 mt-2">
-                <input
-                  type="text"
-                  class="px-5 py-3 h-[60px] rounded-[5px] border border-(--Primary_Color) text-2xl text-(--Text_Color)"
-                  placeholder="Назва компанії *"
-                />
-                <input
-                  type="text"
-                  class="px-5 py-3 h-[60px] rounded-[5px] border border-(--Primary_Color) text-2xl text-(--Text_Color)"
-                  placeholder="Ваша посада *"
-                />
-                <input
-                  type="text"
-                  class="px-5 py-3 h-[60px] rounded-[5px] border border-(--Primary_Color) text-2xl text-(--Text_Color)"
-                  placeholder="Галузь компанії *"
-                />
+                <InputComponent placeholder="Назва компанії *" />
+                <InputComponent placeholder="Ваша посада *" />
+                <InputComponent placeholder="Галузь компанії *" />
               </div>
               <div class="flex flex-col gap-4">
                 <button

@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import RubricsComponent from "@/components/common/RubricsComponent.vue";
 const itemsArea = ref([
   "HR спеціаліси",
   "IT",
@@ -68,54 +69,9 @@ const itemsCity = ref([
       <div
         class="text-(--Text_Color) mt-[30px] mb-5 w-full py-4 flex flex-col gap-10"
       >
-        <div>
-          <div class="text-3xl">Професійні сфери</div>
-          <div class="flex gap-2.5 items-center mt-[15px] flex-wrap">
-            <button
-              class="text-[15px] rounded-[15px] py-1 px-2.5 border border-(--Primary_Color) hover:bg-(--Secondary_Color) cursor-pointer"
-              v-for="value in itemsArea"
-            >
-              {{ value }}
-            </button>
-            <button
-              class="text-[15px] rounded-[15px] py-1 px-2.5 border border-(--Primary_Color) bg-(--Secondary_Color) cursor-pointer"
-            >
-              Інше
-            </button>
-          </div>
-        </div>
-        <div>
-          <div class="text-3xl">Популярні професії</div>
-          <div class="flex gap-2.5 items-center mt-[15px] flex-wrap">
-            <button
-              class="text-[15px] rounded-[15px] py-1 px-2.5 border border-(--Primary_Color) hover:bg-(--Secondary_Color) cursor-pointer"
-              v-for="value in itemsProf"
-            >
-              {{ value }}
-            </button>
-            <button
-              class="text-[15px] rounded-[15px] py-1 px-2.5 border border-(--Primary_Color) bg-(--Secondary_Color) cursor-pointer"
-            >
-              Інше
-            </button>
-          </div>
-        </div>
-        <div>
-          <div class="text-3xl">Популярні міста</div>
-          <div class="flex gap-2.5 items-center mt-[15px] flex-wrap">
-            <button
-              class="text-[15px] rounded-[15px] py-1 px-2.5 border border-(--Primary_Color) hover:bg-(--Secondary_Color) cursor-pointer"
-              v-for="value in itemsCity"
-            >
-              {{ value }}
-            </button>
-            <button
-              class="text-[15px] rounded-[15px] py-1 px-2.5 border border-(--Primary_Color) bg-(--Secondary_Color) cursor-pointer"
-            >
-              Інше
-            </button>
-          </div>
-        </div>
+        <RubricsComponent title="Професійні сфери" :items="itemsArea" />
+        <RubricsComponent title="Популярні професії" :items="itemsProf" />
+        <RubricsComponent title="Популярні міста" :items="itemsCity" />
       </div>
     </div>
   </div>
