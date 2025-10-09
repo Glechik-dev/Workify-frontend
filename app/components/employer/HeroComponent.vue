@@ -16,7 +16,8 @@
           <div
             class="text-5xl bg-(--BG_Second_Color) relative overflow-hidden z-10 py-[10px] text-center font-bold"
           >
-            Тисячі спеціалістів шукають роботу зараз
+            Тисячі спеціалістів шукають
+            <span class="text-(--Primary_Color) font-bold">роботу</span> зараз
           </div>
           <div
             class="absolute w-[20px] h-[20px] bg-(--Primary_Color) top-[-3px] left-[-3px]"
