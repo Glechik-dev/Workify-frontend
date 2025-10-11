@@ -2,7 +2,7 @@
 
 <template>
   <footer
-    class="w-full mt-15 border-t border-t-(--Secondary_Color_Opacity) flex flex-col items-center text-(--Text_Color) relative overflow-hidden"
+    class="w-full mt-15 border-t border-t-(--Secondary_Color_Opacity) flex flex-col items-center text-(--Text_Color) relative"
   >
     <div class="absolute bottom-15 right-5 rotate-90">
       <NuxtImg src="/Frame 22.png" />

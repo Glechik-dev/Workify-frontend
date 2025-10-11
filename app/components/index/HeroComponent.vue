@@ -30,7 +30,7 @@ const items = ref([
 
 <template>
   <div
-    class="w-full h-[350px] bg-(--BG_Second_Color) text-(--Text_Color) flex justify-center relative overflow-hidden"
+    class="w-full h-[350px] bg-(--BG_Second_Color) text-(--Text_Color) flex justify-center relative"
   >
     <div class="absolute bottom-[5px] left-0 rotate-90">
       <NuxtImg src="/Frame 31.png" />
@@ -51,7 +51,11 @@ const items = ref([
         Тисячі вакансій у сфері комп’ютерних наук, інженерії та технологій
         чекають саме на тебе.
       </div>
-      <SearchComponent :options="options" placeholder="Виберіть місто/країну" />
+      <SearchComponent
+        :options="options"
+        placeholder="Виберіть місто/країну"
+        :routing="true"
+      />
       <div class="flex gap-2.5 items-center">
         <button
           class="text-[15px] rounded-[15px] py-1 px-2.5 border border-(--Primary_Color) hover:bg-(--Secondary_Color) cursor-pointer"

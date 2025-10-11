@@ -1,13 +1,15 @@
+<script setup lang="ts">
+const itemStore = useFilterStore();
+</script>
+
 <template>
   <div class="w-full text-(--Text_Color) text-xl flex justify-center">
     <div class="w-full container px-35 py-10">
       <div class="flex gap-8">
         <div
-          class="w-[250px] h-fit p-4.5 flex flex-col gap-3 text-2xl font-bold border border-(--Primary_Color) rounded-[15px]"
+          class="w-[360px] h-fit p-3 flex flex-col gap-3 text-2xl font-bold border border-(--Primary_Color) rounded-[15px]"
         >
-          <div>Тип зайнятості</div>
-          <div>Тип вакансії</div>
-          <div>Рівень досвіду</div>
+          <CommonAccordionComponent :items="itemStore.items" />
         </div>
         <div class="w-full flex flex-col">
           <div
@@ -24,6 +26,9 @@
             <SearchCardComponent />
             <SearchCardComponent />
             <SearchCardComponent />
+          </div>
+          <div class="w-full pt-5">
+            <CommonPaginationComponent />
           </div>
         </div>
       </div>

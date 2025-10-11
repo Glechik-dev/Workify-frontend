@@ -14,14 +14,26 @@ import {
   ComboboxViewport,
 } from "reka-ui";
 
-const { options, placeholder } = defineProps<{
-  options: Array<{ name: string; children: Array<{ name: string }> }>;
-  placeholder: String;
-}>();
+const { options, placeholder, searchFunction, value } = defineProps({
+  options: {
+    type: Array<{ name: string; children: Array<{ name: string }> }>,
+    required: true,
+  },
+  placeholder: String,
+  searchFunction: {
+    type: Function,
+    required: true,
+  },
+  value: String,
+});
 </script>
 
 <template>
-  <ComboboxRoot class="relative text-(--Text_Black_Color) w-full">
+  <ComboboxRoot
+    class="relative text-(--Text_Black_Color) w-full"
+    v-on:update:model-value="(value) => searchFunction(value)"
+    :model-value="value"
+  >
     <ComboboxAnchor
       class="w-full p-2 my-2 flex items-center justify-between bg-(--BG_White_Color) rounded-r-[15px] gap-[5px]"
     >
@@ -41,7 +53,7 @@ const { options, placeholder } = defineProps<{
         <ComboboxEmpty class="text-mauve8 font-medium text-center py-2" />
 
         <template v-for="(group, index) in options" :key="options.name">
-          <ComboboxGroup class="h-[100px] overflow-auto">
+          <ComboboxGroup class="h-[180px] overflow-auto">
             <ComboboxSeparator
               v-if="index !== 0"
               class="h-[1px] bg-grass6 m-[5px]"

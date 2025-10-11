@@ -1,7 +1,9 @@
 <script></script>
 
 <template>
-  <CommonHeaderComponent />
-  <NuxtPage />
-  <CommonFooterComponent />
+  <div class="overflow-x-hidden">
+    <CommonHeaderComponent />
+    <NuxtPage />
+    <CommonFooterComponent />
+  </div>
 </template>
