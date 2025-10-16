@@ -1,5 +1,12 @@
+<script setup lang="ts">
+const { id } = defineProps({
+  id: String,
+});
+</script>
+
 <template>
-  <div
+  <NuxtLink
+    :to="`/vacancy/${id}`"
     class="2xl:w-[455px] w-full p-4.5 border border-(--Primary_Color) rounded-[15px] cursor-pointer"
   >
     <div class="flex justify-between">
@@ -44,5 +51,5 @@
         <Icon name="material-symbols-light:bookmark-outline" size="20" />
       </div>
     </div>
-  </div>
+  </NuxtLink>
 </template>

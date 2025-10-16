@@ -19,13 +19,9 @@ const itemStore = useFilterStore();
             <div>Сортирувати по:</div>
           </div>
           <div class="w-full pt-5 flex justify-between gap-4 flex-wrap">
-            <SearchCardComponent />
-            <SearchCardComponent />
-            <SearchCardComponent />
-            <SearchCardComponent />
-            <SearchCardComponent />
-            <SearchCardComponent />
-            <SearchCardComponent />
+            <template v-for="key in 5">
+              <SearchCardComponent :id="`${key}`" />
+            </template>
           </div>
           <div class="w-full pt-5">
             <CommonPaginationComponent />
