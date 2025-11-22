@@ -23,11 +23,12 @@
             class="w-[870px] h-12 bg-(--BG_White_Color) text-(--Text_Black_Color) py-[5px] px-[10px] text-[25px] rounded-r-[15px]"
           />
         </div>
-        <div
+        <NuxtLink
           class="w-[240px] h-12 border border-(--Primary_Color) rounded-[15px] flex items-center justify-center text-[20px] transition-colors hover:bg-(--Secondary_Color) cursor-pointer gap-2"
+          to="/auth/registration/employer"
         >
           <Icon name="el:search-alt" size="17" class="pb-0.5" /> Знайти резюме
-        </div>
+        </NuxtLink>
       </div>
     </div>
   </div>

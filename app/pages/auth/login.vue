@@ -1,5 +1,35 @@
 <script setup lang="ts">
+import { useField, useForm } from "vee-validate";
 import InputComponent from "@/components/common/InputComponent.vue";
+import * as zod from "zod";
+
+const validationSchema = toTypedSchema(
+  zod.object({
+    email: zod
+      .string()
+      .min(1, { message: "This is required" })
+      .email({ message: "Must be a valid email" }),
+    password: zod
+      .string()
+      .min(1, { message: "This is required" })
+      .min(8, { message: "Too short" }),
+  })
+);
+
+const { handleSubmit, errors } = useForm({
+  validationSchema,
+  initialValues: {
+    email: "",
+    password: "",
+  },
+});
+
+const { value: email } = useField("email");
+const { value: password } = useField("password");
+
+const onSubmit = handleSubmit((values) => {
+  alert(JSON.stringify(values, null, 2));
+});
 </script>
 
 <template>
@@ -19,10 +49,18 @@ import InputComponent from "@/components/common/InputComponent.vue";
         />
         <div class="w-[540px] px-[60px] py-[70px] flex flex-col gap-6">
           <div class="text-4xl">Увійдіть на сайт</div>
-          <form class="flex flex-col gap-6">
+          <form class="flex flex-col gap-6" @submit="onSubmit">
             <div class="flex flex-col gap-6">
-              <InputComponent placeholder="Email або номер телефону *" />
-              <InputComponent placeholder="Пароль *" />
+              <InputComponent
+                placeholder="Email або номер телефону *"
+                v-model="email"
+                :error="errors.email"
+              />
+              <InputComponent
+                placeholder="Пароль *"
+                v-model="password"
+                :error="errors.password"
+              />
             </div>
             <div class="flex flex-col gap-4">
               <button

@@ -13,6 +13,7 @@
   --Primary_Hover_Color: #0d6efd; /* Синий при наведении */
   --Secondary_Color: #0077cc; /* Тёмно-синий */
   --Secondary_Color_03_Opacity: rgba(0, 119, 204, 0.3);
+  --Secondary_Dark_Color: rgb(1, 38, 64);
   --Secondary_Color_Opacity: rgba(0, 119, 204, 0.1);
   --Accent_Color: #3399ff; /* Яркий голубой акцент */
 
@@ -21,6 +22,7 @@
   --Input_BG_Color: #0d1320; /* Фон инпутов */
   --Border_Color: #1a2233; /* Базовый бордер */
   --Border_Highlight_Color: #1e90ff;
+  --Yellow_Color: #fff700;
 
   /* Состояния */
   --Success_Color: #00c851;

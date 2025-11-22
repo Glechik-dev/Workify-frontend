@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const itemStore = useFilterStore();
+const route = useRoute();
 </script>
 
 <template>
@@ -15,11 +16,15 @@ const itemStore = useFilterStore();
           <div
             class="w-full p-4 flex justify-between bg-(--Secondary_Color_Opacity) border border-(--Primary_Color) rounded-[15px]"
           >
-            <div><strong>8,746</strong> Вакансій знайдено</div>
-            <div>Сортирувати по:</div>
+            <div class="flex items-center gap-1.5">
+              <strong>8,746</strong> Вакансій знайдено
+            </div>
+            <div class="flex items-center gap-3">
+              Сортирувати по: <CommonSortComponent />
+            </div>
           </div>
           <div class="w-full pt-5 flex justify-between gap-4 flex-wrap">
-            <template v-for="key in 5">
+            <template v-for="key in 10">
               <SearchCardComponent :id="`${key}`" />
             </template>
           </div>
